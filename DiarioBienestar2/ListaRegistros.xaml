@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.ListaRegistros">
+    <StackLayout Padding="15" Spacing="10">
+
+        <!-- Actualiza la lista -->
+        <Button Text="Actualizar Lista" 
+                BackgroundColor="#2196F3" 
+                TextColor="White"
+                FontAttributes="Bold"
+                FontSize="16"
+                Padding="10"
+                WidthRequest="170"
+                Clicked="OnActualizarClicked" />
+
+        <!-- Titulos columnas-->
+        <Grid ColumnDefinitions="*,*,*,*,Auto" Padding="2">
+            <Label Text="Detalles" Grid.Column="0" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Intensidad" Grid.Column="1" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Energía" Grid.Column="2" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Fecha" Grid.Column="3" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Acciones" Grid.Column="4" FontAttributes="Bold" HorizontalOptions="Center" />
+        </Grid>
+
+        <!-- CollectionView de los registros -->
+        <CollectionView x:Name="viewRegistros" HorizontalOptions="FillAndExpand" SelectedItem="{Binding SelectedItem}" HeightRequest="500" VerticalOptions="FillAndExpand">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*,*,*,Auto" Padding="10">
+                        <!-- Informacion de registros -->
+                        <Label Text="{Binding Detalles}" Grid.Column="0" VerticalTextAlignment="Center"  MaxLines="1" LineBreakMode="TailTruncation"/>
+                        <Label Text="{Binding Intensidad}" Grid.Column="1" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <Label Text="{Binding Energia}" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <Label Text="{Binding Fecha, StringFormat='{0:dd-MM-yyyy}'}" Grid.Column="3" VerticalTextAlignment="Center" HorizontalOptions="Center" />
+                        <!--Elimina los registros (tanto en la coleccion como en la db) -->
+                        <ImageButton  
+                                Grid.Column="4" 
+                                WidthRequest="0.1"
+                                HeightRequest="0.1"
+                                Source="borrar.png"
+                                HorizontalOptions="Center" 
+                                Clicked="OnEliminarClicked" 
+                                Padding="5" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

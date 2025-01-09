@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.RegistroDiario"
+             BackgroundColor="#F7F7F7">
+    <Frame HeightRequest="500" WidthRequest="600" CornerRadius="15" Padding="20" Margin="20" BackgroundColor="#FFFFFF">
+        <VerticalStackLayout Spacing="20">
+            <!-- Editor de detalles del día -->
+            <Editor x:Name="editorUsuario" Placeholder="Escribe detalles sobre tu día" WidthRequest="500" HeightRequest="100" MaxLength="500" BackgroundColor="#F5F5F5" />
+
+            <!-- Intensidad de la actividad -->
+            <HorizontalStackLayout>
+                <Label Text="Intensidad de la Actividad Física" VerticalOptions="Center" Padding="1" TextColor="#333" />
+                <Slider x:Name="valorIntensidad" Minimum="0" Maximum="10" WidthRequest="300" ThumbColor="#4CAF50" MinimumTrackColor="#4CAF50" />
+            </HorizontalStackLayout>
+
+            <!-- Energía -->
+            <HorizontalStackLayout>
+                <Stepper x:Name="valorEnergia" Minimum="1" Maximum="5" />
+                <Label x:Name="mostrarValorEnergia" Text="{Binding Source={x:Reference valorEnergia}, Path=Value, StringFormat=' Tu energía: {0:F0}'}" VerticalOptions="Center" TextColor="#333" />
+            </HorizontalStackLayout>
+
+            <!-- Fecha del registro -->
+            <HorizontalStackLayout>
+                <Label Text="Fecha del Registro:" VerticalOptions="Center" TextColor="#333" />
+                <DatePicker x:Name="fechaRegistro" />
+            </HorizontalStackLayout>
+
+            <!-- Botón de guardar -->
+            <Button Text="Guardar" Clicked="guardar_DatosUsuario" WidthRequest="150" HeightRequest="50" BackgroundColor="#2196F3" TextColor="White" CornerRadius="10" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </Frame>
+</ContentPage>

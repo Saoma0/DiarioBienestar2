@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DiarioBienestar2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DiarioBienestar2"
+    Shell.FlyoutBehavior="Flyout"
+    Title="DiarioBienestar2"
+    BackgroundColor="#F7F7F7"
+    FlyoutBackgroundColor="#2196F3">
+
+    <ShellContent Icon="icon_mainpage_flyout.png" Title="Inicio" ContentTemplate="{DataTemplate local:MainPage} " Shell.NavBarIsVisible="False"/>
+    <ShellContent Icon="icon_registrodiario_flyout.png" Title="Registro Diario" ContentTemplate="{DataTemplate local:RegistroDiario}" Shell.NavBarIsVisible="False"/>
+    <ShellContent Icon="icon_progreso_flyout.png" Title="Progreso" ContentTemplate="{DataTemplate local:Progreso}" Shell.NavBarIsVisible="False"/>
+    <ShellContent Icon="icon_listaregistros_flyout.png" Title="Historial de Registro" ContentTemplate="{DataTemplate local:ListaRegistros}" Shell.NavBarIsVisible="False"/>
+
+    <Shell.FlyoutHeader>
+        <StackLayout Padding="10">
+            <Button Text="Cerrar sesión" Clicked="CerrarSesionClicked" BackgroundColor="#4CAF50"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+</Shell>

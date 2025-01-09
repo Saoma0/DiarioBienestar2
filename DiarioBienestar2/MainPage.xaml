@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiarioBienestar2.MainPage">
+
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="20" Spacing="20">
+        <Label Text="Diario Bienestar" FontSize="70" HorizontalOptions="Center" TextColor="#2196F3" FontAttributes="Bold"></Label>
+        <Label x:Name="bienvenidaUsuario" FontSize="18" HorizontalOptions="Center" TextColor="#555"></Label>
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+            <Button Text="Iniciar Sesion" x:Name="bIniciarSesion" Clicked="inicio_sesion" BackgroundColor="#2196F3" TextColor="White" CornerRadius="10" Padding="10" WidthRequest="150"></Button>
+            <Button Text="Registrarse" x:Name="bRegistrarse" Clicked="registro_usuario" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" Padding="10" WidthRequest="150"></Button>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>
