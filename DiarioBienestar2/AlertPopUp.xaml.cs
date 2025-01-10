@@ -7,7 +7,7 @@ namespace DiarioBienestar2
         public AlertPopUp(string mensaje)
         {
             InitializeComponent();
-            popupMessage.Text = mensaje; // Establecer el mensaje en el popup
+            popupMessage.Text = mensaje; // Establecer mensaje en el popup
             
         }
 

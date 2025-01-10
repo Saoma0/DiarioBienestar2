@@ -8,11 +8,7 @@
     <Grid BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center">
         <Frame BackgroundColor="#FFFFFF" CornerRadius="12" Padding="20" WidthRequest="300" HasShadow="True">
             <VerticalStackLayout>
-                <Label x:Name="popupMessage" 
-                   HorizontalOptions="Center" 
-                   FontSize="14" 
-                   TextColor="#333" 
-                   Padding="10" />
+                <Label x:Name="popupMessage" HorizontalOptions="Center" FontSize="14" TextColor="#333" Padding="10" />
             </VerticalStackLayout>
         </Frame>
     </Grid>

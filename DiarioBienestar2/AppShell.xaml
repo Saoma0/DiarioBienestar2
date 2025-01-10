@@ -14,6 +14,8 @@
     <ShellContent Icon="icon_progreso_flyout.png" Title="Progreso" ContentTemplate="{DataTemplate local:Progreso}" Shell.NavBarIsVisible="False"/>
     <ShellContent Icon="icon_listaregistros_flyout.png" Title="Historial de Registro" ContentTemplate="{DataTemplate local:ListaRegistros}" Shell.NavBarIsVisible="False"/>
 
+    
+    <!-- Boton de cierre de sesion en el header del flyout -->
     <Shell.FlyoutHeader>
         <StackLayout Padding="10">
             <Button Text="Cerrar sesión" Clicked="CerrarSesionClicked" BackgroundColor="#4CAF50"/>

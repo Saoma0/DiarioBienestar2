@@ -17,18 +17,21 @@ public partial class MainPage : ContentPage
 
     }
 
+    //Mensaje de bienvenida
     public void bienvenida_usuario()
     {
         bienvenidaUsuario.Text = "Bienvenido " + NombreUsuario.nombreUsuario + " a tu diario de bienestar";
     }
 
 
-
+    //Navega a la pag de registro
     private async void registro_usuario(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new Registro());
     }
 
+
+    //navega a pag de inicio sesion y si ya has iniciao sesion muestra alerta
     private async void inicio_sesion(object sender, EventArgs e)
     {
         if (Sesion.IsLoggedIn)
@@ -44,6 +47,8 @@ public partial class MainPage : ContentPage
             Application.Current.MainPage = new NavigationPage(new InicioSesion());
         }
     }
+
+    //Muestra PopUp
     public async void ShowrPopUpAlert(string messageAlert)
     {
         Debug.WriteLine("PopUp Debug");

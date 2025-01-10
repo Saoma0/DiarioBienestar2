@@ -5,14 +5,7 @@
     <StackLayout Padding="15" Spacing="10">
 
         <!-- Actualiza la lista -->
-        <Button Text="Actualizar Lista" 
-                BackgroundColor="#2196F3" 
-                TextColor="White"
-                FontAttributes="Bold"
-                FontSize="16"
-                Padding="10"
-                WidthRequest="170"
-                Clicked="OnActualizarClicked" />
+        <Button Text="Actualizar Lista" BackgroundColor="#2196F3" TextColor="White" FontAttributes="Bold" FontSize="16" Padding="10" WidthRequest="170" Clicked="OnActualizarClicked" />
 
         <!-- Titulos columnas-->
         <Grid ColumnDefinitions="*,*,*,*,Auto" Padding="2">
@@ -34,14 +27,7 @@
                         <Label Text="{Binding Energia}" Grid.Column="2" VerticalTextAlignment="Center" HorizontalOptions="Center" />
                         <Label Text="{Binding Fecha, StringFormat='{0:dd-MM-yyyy}'}" Grid.Column="3" VerticalTextAlignment="Center" HorizontalOptions="Center" />
                         <!--Elimina los registros (tanto en la coleccion como en la db) -->
-                        <ImageButton  
-                                Grid.Column="4" 
-                                WidthRequest="0.1"
-                                HeightRequest="0.1"
-                                Source="borrar.png"
-                                HorizontalOptions="Center" 
-                                Clicked="OnEliminarClicked" 
-                                Padding="5" />
+                        <ImageButton  Grid.Column="4" WidthRequest="0.1" HeightRequest="0.1" Source="borrar.png" HorizontalOptions="Center"  Clicked="OnEliminarClicked" Padding="5" />
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

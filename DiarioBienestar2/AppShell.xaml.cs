@@ -8,27 +8,32 @@
             
         }
 
+        //Metodo que cierra la sesion del usuario
         private async void CerrarSesionClicked(object sender, EventArgs e)
         {
-            if (!Sesion.IsLoggedIn) // Verifica si el usuario no ha iniciado sesión
+            /** 
+             Si la sesion no esta iniciada, saldra una alerta para que inicies sesion
+             Si la sesion esta iniciada te muestra una alerta preguntando si quieres cerrar sesion
+             Si quieres cerrar sesion te envia automaticamente al inicio de sesion
+             */
+            if (!Sesion.IsLoggedIn) 
             {
-                // Si no está logueado, muestra una alerta indicando que debe iniciar sesión primero
+               
                 await DisplayAlert("Advertencia", "Primero debes iniciar sesión.", "OK");
-                return; // Sale del método sin hacer nada
+                return; //sale del metodo
             }
             bool respuesta = await DisplayAlert("Cierre de sesión", "¿Estás seguro de que deseas cerrar sesión?", "Sí", "No");
 
-            if (respuesta) // Si el usuario elige "Sí"
+            if (respuesta)
             {
-                // Limpiar los datos de sesión
+                // Limpia los datos de sesión
                 LimpiarDatosSesion();
-
-                // Redirigir a la página de login
                 Application.Current.MainPage = new NavigationPage(new InicioSesion());
             }
 
         }
 
+        //Metodo para lipiar los datos de la sesion
         private void LimpiarDatosSesion()
         {
             Identificador.ID = 0;

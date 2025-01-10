@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiarioBienestar2
 {
+    //Para almacenar utilizar y mostar datos
     public class RegistroLista
     {
         public int ID {get;set;}

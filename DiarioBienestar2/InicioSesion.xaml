@@ -6,7 +6,6 @@
 
     <VerticalStackLayout Padding="20" Spacing="20" VerticalOptions="Center">
         <Frame BorderColor="#2196F3" CornerRadius="10" Padding="20" HasShadow="True" HeightRequest="300" WidthRequest="500">
-            <!-- Formulario -->
             <VerticalStackLayout Spacing="15" >
                 <Frame BorderColor="#2196F3" CornerRadius="5" Padding="10">
                     <Entry x:Name="entryInicioUsuario" Placeholder="Escribe el nombre de usuario..." BackgroundColor="#F7F7F7"></Entry>
