@@ -100,4 +100,8 @@
 	  </None>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="DocumentoPráctica\" />
+	</ItemGroup>
+
 </Project>
