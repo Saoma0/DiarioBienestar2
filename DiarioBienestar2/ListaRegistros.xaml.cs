@@ -86,7 +86,7 @@ public partial class ListaRegistros : ContentPage
             }
 
             //Muestra alerta de confirmacion
-            bool isConfirmed = await DisplayAlert("Confirmirmacion", "¿Deseas eliminar este registro?", "Sí", "No");
+            bool isConfirmed = await DisplayAlert("Confirmación", "¿Deseas eliminar este registro?", "Sí", "No");
 
             //Si confirma 
             if (isConfirmed)
